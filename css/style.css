@@ -1,42 +1,47 @@
-.outer li {
-    color: olivedrab;
+body {
+    margin: 0;
 }
 
-.outer > li {
-    color: dodgerblue;
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
-.outer > li li {
-    text-decoration: underline;
+#header {
+    display: flex;
+    flex-basis: 100px;
+    align-items: flex-end;
+    padding: 12px;
+    background-color: dodgerblue;
+    gap: 12px;
 }
 
-.starter ~ li {
-    font-style: italic;
+#header > * {
+    background-color: yellow;
+    padding: 12px 0;
+    text-align: center;
 }
 
-.starter + li {
-    font-weight: bold;
+#header > *:first-child {
+    flex-basis: 100px
 }
 
-ol li:first-child,
-ol li:last-child {
-    color: yellowgreen;
+#header > *:last-child {
+    flex-grow:1;
 }
 
-.outer > li:not(:last-child) {
-    text-decoration: line-through;
+#content {
+    padding: 24px;
+    background-color: skyblue   ;
 }
-
-ul:not(.outer) li{
-    font-weight: bold;
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
 }
-
-ol li:nth-child(3) {
-    font-weight: bold;
-    color: deeppink;
-}
-
-h1:hover {
-    font-weight: bold;
-    color: blue;
+#footer {
+    flex-basis: 60px;
+    background-color: tomato;
 }
